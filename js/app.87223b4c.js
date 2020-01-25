@@ -1,2 +1,1702 @@
-(function(e){function t(t){for(var a,r,l=t[0],o=t[1],c=t[2],u=0,p=[];u<l.length;u++)r=l[u],n[r]&&p.push(n[r][0]),n[r]=0;for(a in o)Object.prototype.hasOwnProperty.call(o,a)&&(e[a]=o[a]);d&&d(t);while(p.length)p.shift()();return s.push.apply(s,c||[]),i()}function i(){for(var e,t=0;t<s.length;t++){for(var i=s[t],a=!0,l=1;l<i.length;l++){var o=i[l];0!==n[o]&&(a=!1)}a&&(s.splice(t--,1),e=r(r.s=i[0]))}return e}var a={},n={app:0},s=[];function r(t){if(a[t])return a[t].exports;var i=a[t]={i:t,l:!1,exports:{}};return e[t].call(i.exports,i,i.exports,r),i.l=!0,i.exports}r.m=e,r.c=a,r.d=function(e,t,i){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:i})},r.r=function(e){"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"===typeof e&&e&&e.__esModule)return e;var i=Object.create(null);if(r.r(i),Object.defineProperty(i,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var a in e)r.d(i,a,function(t){return e[t]}.bind(null,a));return i},r.n=function(e){var t=e&&e.__esModule?function(){return e["default"]}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="/";var l=window["webpackJsonp"]=window["webpackJsonp"]||[],o=l.push.bind(l);l.push=t,l=l.slice();for(var c=0;c<l.length;c++)t(l[c]);var d=o;s.push([0,"chunk-vendors"]),i()})({0:function(e,t,i){e.exports=i("56d7")},"034f":function(e,t,i){"use strict";var a=i("1356"),n=i.n(a);n.a},1356:function(e,t,i){},2403:function(e,t,i){"use strict";var a=i("7de0"),n=i.n(a);n.a},"56d7":function(e,t,i){"use strict";i.r(t);i("cadf"),i("551c"),i("f751"),i("097d");var a=i("2b0e"),n=function(){var e=this,t=e.$createElement,i=e._self._c||t;return i("div",{attrs:{id:"app"}},[i("Statistics")],1)},s=[],r=function(){var e=this,t=e.$createElement,i=e._self._c||t;return e.database?i("md-tabs",[i("md-tab",{attrs:{id:"tab-base","md-label":"Основная статистика"}},[i("div",[i("v-data-table",{attrs:{headers:e.headers,items:e.playerStatisticsForDisplay,"disable-pagination":"","hide-default-footer":"","multi-sort":"","mobile-breakpoint":"0","sort-by":["isRating","relativePoints","absolutePoints","games","name"],"sort-desc":[!0,!0,!0,!0,!1]},scopedSlots:e._u([{key:"item",fn:function(t){var a=t.item;return[i("tr",{class:{notRating:!a.isRating}},[i("td",[e._v(e._s(a.name))]),i("td",[e._v(e._s(a.relativePoints||0))]),i("td",[e._v(e._s(a.games))]),i("td",[e._v(e._s(a.wins))]),i("td",[e._v(e._s(a.firstKilled))]),i("td",[e._v(e._s(a.firstKilledGuessPoints))]),i("td",[e._v(e._s(a.sherif))]),i("td",[e._v(e._s(a.sherifWins))]),i("td",[e._v(e._s(a.citizen))]),i("td",[e._v(e._s(a.don))]),i("td",[e._v(e._s(a.donWins))]),i("td",[e._v(e._s(a.maf))]),i("td",[e._v(e._s(a.mafWins))]),i("td",[e._v(e._s(a.absolutePoints))])])]}}],null,!1,3914092594)})],1),i("div",{staticClass:"games-statistic games-statistic-all"},[e._v("Всего игр: "+e._s(e.gamesCount))]),i("div",{staticClass:"games-statistic games-statistic-red-wins"},[e._v("Побед мирных: "+e._s(e.redWinsCount))]),i("div",{staticClass:"games-statistic games-statistic-black-wins"},[e._v("Побед мафии: "+e._s(e.blackWinsCount))]),i("div",{staticClass:"games-statistic games-statistic-rating"},[e._v("Игр для попадания в рейтинг: "+e._s(e.gamesForRatingCount)+" (12%)")])]),i("md-tab",{attrs:{id:"tab-roles","md-label":"По ролям"}},[i("RoleStatistic",{attrs:{playerStatisticsForDisplay:e.playerStatisticsForDisplayRating,players:e.ratingPlayers}})],1),i("md-tab",{attrs:{id:"tab-players","md-label":"По игрокам"}},[i("PlayerStatistic",{attrs:{playerStatisticsForDisplay:e.playerStatisticsForDisplayRating,players:e.ratingPlayers}})],1),i("md-tab",{attrs:{id:"tab-box","md-label":"По номерам"}},[i("BoxStatistic",{attrs:{playerStatisticsForDisplay:e.playerStatisticsForDisplayRating,players:e.ratingPlayers}})],1)],1):e._e()},l=[],o=(i("6c7b"),i("ac6a"),i("7514"),i("7f7f"),i("55dd"),i("a481"),i("28a5"),i("96cf"),i("3b8d")),c=function(){var e=this,t=e.$createElement,i=e._self._c||t;return i("v-data-table",{attrs:{headers:e.headers,items:e.items,options:e.options,"server-items-length":1,"disable-pagination":"","hide-default-footer":"","must-sort":""},on:{"update:options":function(t){e.options=t}},scopedSlots:e._u([{key:"item.sherif",fn:function(t){var a=t.item;return[e.displayChip(a,"sherif")?i("v-chip",{attrs:{color:e.getColor(a,"sherif")}},[e._v(e._s(a.sherifWins)+"/"+e._s(a.sherif)+"   "+e._s(a.sherifWinPercent)+"%")]):e._e(),e.displayChip(a,"sherif")?e._e():i("span",[e._v(e._s(a.sherifWins)+"/"+e._s(a.sherif)+"   "+e._s(a.sherifWinPercent)+"%")])]}},{key:"item.citizen",fn:function(t){var a=t.item;return[e.displayChip(a,"citizen")?i("v-chip",{attrs:{color:e.getColor(a,"citizen")}},[e._v(e._s(a.citizenWins)+"/"+e._s(a.citizen)+"   "+e._s(a.citizenWinPercent)+"%")]):e._e(),e.displayChip(a,"citizen")?e._e():i("span",[e._v(e._s(a.citizenWins)+"/"+e._s(a.citizen)+"   "+e._s(a.citizenWinPercent)+"%")])]}},{key:"item.don",fn:function(t){var a=t.item;return[e.displayChip(a,"don")?i("v-chip",{attrs:{color:e.getColor(a,"don")}},[e._v(e._s(a.donWins)+"/"+e._s(a.don)+"   "+e._s(a.donWinPercent)+"%")]):e._e(),e.displayChip(a,"don")?e._e():i("span",[e._v(e._s(a.donWins)+"/"+e._s(a.don)+"   "+e._s(a.donWinPercent)+"%")])]}},{key:"item.maf",fn:function(t){var a=t.item;return[e.displayChip(a,"maf")?i("v-chip",{attrs:{color:e.getColor(a,"maf")}},[e._v(e._s(a.mafWins)+"/"+e._s(a.maf)+"   "+e._s(a.mafWinPercent)+"%")]):e._e(),e.displayChip(a,"maf")?e._e():i("span",[e._v(e._s(a.mafWins)+"/"+e._s(a.maf)+"   "+e._s(a.mafWinPercent)+"%")])]}}])})},d=[],u=(i("6762"),i("2fdb"),{name:"RoleStatistic",props:{playerStatisticsForDisplay:Array,players:Array},data:function(){return{items:[],options:{},headers:[{text:"Игрок",value:"name"},{text:"Лучший шериф",value:"sherif"},{text:"Лучший мирный",value:"citizen"},{text:"Лучший дон",value:"don"},{text:"Лучший маф",value:"maf"}]}},watch:{options:{handler:function(){var e=this;this.getData().then(function(t){e.items=t.items})},deep:!0}},methods:{displayChip:function(e,t){var i=t+"WinPercent",a=this.getHighligting(e[i],e[t]);return"none"!=a},getColor:function(e,t){var i=t+"WinPercent";return this.getHighligting(e[i],e[t])},getHighligting:function(e,t){return 0==t?"none":100==e?"rgb(0, 255, 0)":e>60?"rgba(0, 255, 0, 0.5)":0==e?"rgb(255, 0, 0)":"none"},getData:function(){var e=this;return new Promise(function(t){var i=e.options,a=i.sortBy,n=i.sortDesc,s=e.playerStatisticsForDisplay.slice(0),r=s.length;if(1===a.length&&1===n.length||0==a.length){var l="name",o=!1;1==a.length&&(l=a[0],o=n[0]),s=s.sort(function(t,i){if(["sherif","citizen","don","maf"].includes(l))return e.percentSort(t,i,l,o);var a=t[l],n=i[l];return o?a<n?1:a>n?-1:0:a<n?-1:a>n?1:0})}t({items:s,total:r})})},percentSort:function(e,t,i,a){var n=i+"WinPercent";return e[n]>t[n]?a?-1:1:e[n]<t[n]?a?1:-1:e[i]>t[i]?a?-1:1:e[i]<t[i]?a?1:-1:0}}}),p=u,f=i("2877"),h=i("6544"),y=i.n(h),m=i("cc20"),b=i("8fea"),_=Object(f["a"])(p,c,d,!1,null,null,null),v=_.exports;y()(_,{VChip:m["a"],VDataTable:b["a"]});var g=function(){var e=this,t=e.$createElement,i=e._self._c||t;return e.selectedPlayerId?i("div",{staticClass:"player-statistic"},[i("div",{staticClass:"select-player-container"},[i("div",{staticClass:"player-lable"},[e._v("Игрок:")]),i("div",{staticClass:"player-selector"},[i("model-list-select",{attrs:{list:e.players,"option-value":"id","option-text":"name",placeholder:"выберите игрока"},model:{value:e.selectedPlayerId,callback:function(t){e.selectedPlayerId=t},expression:"selectedPlayerId"}})],1)]),i("v-data-table",{attrs:{headers:e.headers,items:e.items,options:e.options,"server-items-length":1,"disable-pagination":"","hide-default-footer":"","must-sort":""},on:{"update:options":function(t){e.options=t}},scopedSlots:e._u([{key:"item.bothRed",fn:function(t){var a=t.item;return[e.displayChip(a,"bothRed")?i("v-chip",{attrs:{color:e.getColor(a,"bothRed")}},[e._v(e._s(a.bothRedWins)+"/"+e._s(a.bothRed)+"   "+e._s(a.bothRedWinPercent)+"%")]):e._e(),e.displayChip(a,"bothRed")?e._e():i("span",[e._v(e._s(a.bothRedWins)+"/"+e._s(a.bothRed)+"   "+e._s(a.bothRedWinPercent)+"%")])]}},{key:"item.bothBlack",fn:function(t){var a=t.item;return[e.displayChip(a,"bothBlack")?i("v-chip",{attrs:{color:e.getColor(a,"bothBlack")}},[e._v(e._s(a.bothBlackWins)+"/"+e._s(a.bothBlack)+"   "+e._s(a.bothBlackWinPercent)+"%")]):e._e(),e.displayChip(a,"bothBlack")?e._e():i("span",[e._v(e._s(a.bothBlackWins)+"/"+e._s(a.bothBlack)+"   "+e._s(a.bothBlackWinPercent)+"%")])]}},{key:"item.playerRed",fn:function(t){var a=t.item;return[e.displayChip(a,"playerRed")?i("v-chip",{attrs:{color:e.getColor(a,"playerRed")}},[e._v(e._s(a.playerRedWins)+"/"+e._s(a.playerRed)+"   "+e._s(a.playerRedWinPercent)+"%")]):e._e(),e.displayChip(a,"playerRed")?e._e():i("span",[e._v(e._s(a.playerRedWins)+"/"+e._s(a.playerRed)+"   "+e._s(a.playerRedWinPercent)+"%")])]}},{key:"item.playerBlack",fn:function(t){var a=t.item;return[e.displayChip(a,"playerBlack")?i("v-chip",{attrs:{color:e.getColor(a,"playerBlack")}},[e._v(e._s(a.playerBlackWins)+"/"+e._s(a.playerBlack)+"   "+e._s(a.playerBlackWinPercent)+"%")]):e._e(),e.displayChip(a,"playerBlack")?e._e():i("span",[e._v(e._s(a.playerBlackWins)+"/"+e._s(a.playerBlack)+"   "+e._s(a.playerBlackWinPercent)+"%")])]}}],null,!1,3098048137)})],1):e._e()},W=[],x=i("0393"),P={name:"PlayerStatistic",props:{playerStatisticsForDisplay:Array,players:Array},components:{ModelListSelect:x["ModelListSelect"]},data:function(){return{currentSort:"name",currentSortOrder:"asc",selectedPlayerId:null,selectedPlayerName:"",statisticWithOtherPlayers:null,items:[],options:{},headers:[{text:"Игрок",value:"name"},{text:"Вместе красные",value:"bothRed"},{text:"Вместе чёрные",value:"bothBlack"},{text:"Разноцвет(игрок красный)",value:"playerRed"},{text:"Разноцвет(игрок чёрный)",value:"playerBlack"}]}},mounted:function(){this.selectedPlayerId=this.players[0].id},watch:{selectedPlayerId:function(e){this.selectedPlayerName=this.getPlayerName(e),this.statisticWithOtherPlayers=this.playerStatisticsForDisplay.find(function(t){return t.id===e}).withOtherPlayers,this.updateTable()},options:{handler:function(){this.updateTable()},deep:!0}},methods:{displayChip:function(e,t){var i=t+"WinPercent",a=this.getHighligting(e[i],e[t]);return"none"!=a},getColor:function(e,t){var i=t+"WinPercent";return this.getHighligting(e[i],e[t])},getHighligting:function(e,t){return 0==t?"none":100==e?"rgb(0, 255, 0)":e>60?"rgba(0, 255, 0, 0.5)":0==e?"rgb(255, 0, 0)":"none"},updateTable:function(){var e=this;this.getData().then(function(t){e.items=t.items})},getData:function(){var e=this;return new Promise(function(t){var i=e.options,a=i.sortBy,n=i.sortDesc,s=e.statisticWithOtherPlayers.slice(0),r=s.length;if(void 0==a||1===a.length&&1===n.length||0===a.length){var l="name",o=!1;void 0!=a&&1==a.length&&(l=a[0],o=n[0]),s=s.sort(function(t,i){if(["bothRed","bothBlack","playerRed","playerBlack"].includes(l))return e.percentSort(t,i,l,o);var a=t[l],n=i[l];return o?a<n?1:a>n?-1:0:a<n?-1:a>n?1:0})}t({items:s,total:r})})},percentSort:function(e,t,i,a){var n=i+"WinPercent";return e[n]>t[n]?a?-1:1:e[n]<t[n]?a?1:-1:e[i]>t[i]?a?-1:1:e[i]<t[i]?a?1:-1:0},getPlayerName:function(e){return this.players.find(function(t){return t.id===e}).name}}},C=P,k=(i("2403"),Object(f["a"])(C,g,W,!1,null,null,null)),S=k.exports;y()(k,{VChip:m["a"],VDataTable:b["a"]});var I=function(){var e=this,t=e.$createElement,i=e._self._c||t;return i("v-data-table",{attrs:{headers:e.headers,items:e.playerStatisticsForDisplay,"disable-pagination":"","hide-default-footer":"","must-sort":"","sort-by":"name"},scopedSlots:e._u([{key:"item.box0",fn:function(t){var a=t.item;return[e.displayChip(a,0)?i("v-chip",{attrs:{color:e.getColor(a,0)}},[e._v(e._s(a.boxWins[0])+"/"+e._s(a.box[0]))]):e._e(),e.displayChip(a,0)?e._e():i("span",[e._v(e._s(a.boxWins[0])+"/"+e._s(a.box[0]))])]}},{key:"item.box1",fn:function(t){var a=t.item;return[e.displayChip(a,1)?i("v-chip",{attrs:{color:e.getColor(a,1)}},[e._v(e._s(a.boxWins[1])+"/"+e._s(a.box[1]))]):e._e(),e.displayChip(a,1)?e._e():i("span",[e._v(e._s(a.boxWins[1])+"/"+e._s(a.box[1]))])]}},{key:"item.box2",fn:function(t){var a=t.item;return[e.displayChip(a,2)?i("v-chip",{attrs:{color:e.getColor(a,2)}},[e._v(e._s(a.boxWins[2])+"/"+e._s(a.box[2]))]):e._e(),e.displayChip(a,2)?e._e():i("span",[e._v(e._s(a.boxWins[2])+"/"+e._s(a.box[2]))])]}},{key:"item.box3",fn:function(t){var a=t.item;return[e.displayChip(a,3)?i("v-chip",{attrs:{color:e.getColor(a,3)}},[e._v(e._s(a.boxWins[3])+"/"+e._s(a.box[3]))]):e._e(),e.displayChip(a,3)?e._e():i("span",[e._v(e._s(a.boxWins[3])+"/"+e._s(a.box[3]))])]}},{key:"item.box4",fn:function(t){var a=t.item;return[e.displayChip(a,4)?i("v-chip",{attrs:{color:e.getColor(a,4)}},[e._v(e._s(a.boxWins[4])+"/"+e._s(a.box[4]))]):e._e(),e.displayChip(a,4)?e._e():i("span",[e._v(e._s(a.boxWins[4])+"/"+e._s(a.box[4]))])]}},{key:"item.box5",fn:function(t){var a=t.item;return[e.displayChip(a,5)?i("v-chip",{attrs:{color:e.getColor(a,5)}},[e._v(e._s(a.boxWins[5])+"/"+e._s(a.box[5]))]):e._e(),e.displayChip(a,5)?e._e():i("span",[e._v(e._s(a.boxWins[5])+"/"+e._s(a.box[5]))])]}},{key:"item.box6",fn:function(t){var a=t.item;return[e.displayChip(a,6)?i("v-chip",{attrs:{color:e.getColor(a,6)}},[e._v(e._s(a.boxWins[6])+"/"+e._s(a.box[6]))]):e._e(),e.displayChip(a,6)?e._e():i("span",[e._v(e._s(a.boxWins[6])+"/"+e._s(a.box[6]))])]}},{key:"item.box7",fn:function(t){var a=t.item;return[e.displayChip(a,7)?i("v-chip",{attrs:{color:e.getColor(a,7)}},[e._v(e._s(a.boxWins[7])+"/"+e._s(a.box[7]))]):e._e(),e.displayChip(a,7)?e._e():i("span",[e._v(e._s(a.boxWins[7])+"/"+e._s(a.box[7]))])]}},{key:"item.box8",fn:function(t){var a=t.item;return[e.displayChip(a,8)?i("v-chip",{attrs:{color:e.getColor(a,8)}},[e._v(e._s(a.boxWins[8])+"/"+e._s(a.box[8]))]):e._e(),e.displayChip(a,8)?e._e():i("span",[e._v(e._s(a.boxWins[8])+"/"+e._s(a.box[8]))])]}},{key:"item.box9",fn:function(t){var a=t.item;return[e.displayChip(a,9)?i("v-chip",{attrs:{color:e.getColor(a,9)}},[e._v(e._s(a.boxWins[9])+"/"+e._s(a.box[9]))]):e._e(),e.displayChip(a,9)?e._e():i("span",[e._v(e._s(a.boxWins[9])+"/"+e._s(a.box[9]))])]}}])})},R=[],B={name:"BoxStatistic",props:{playerStatisticsForDisplay:Array,players:Array},data:function(){return{items:[],options:{},headers:[{text:"Игрок",value:"name"},{text:"1 номер",value:"box0",sortable:!1},{text:"2 номер",value:"box1",sortable:!1},{text:"3 номер",value:"box2",sortable:!1},{text:"4 номер",value:"box3",sortable:!1},{text:"5 номер",value:"box4",sortable:!1},{text:"6 номер",value:"box5",sortable:!1},{text:"7 номер",value:"box6",sortable:!1},{text:"8 номер",value:"box7",sortable:!1},{text:"9 номер",value:"box8",sortable:!1},{text:"10 номер",value:"box9",sortable:!1}]}},methods:{displayChip:function(e,t){var i=this.getHighligting(e,t);return"none"!=i},getColor:function(e,t){return this.getHighligting(e,t)},getHighligting:function(e,t){return 0==e.box[t]?"none":e.boxWins[t]==e.box[t]?"rgb(0, 255, 0)":100*e.boxWins[t]/e.box[t]>60?"rgba(0, 255, 0, 0.5)":0==e.boxWins[t]?"rgb(255, 0, 0)":"none"}}},K=B,O=Object(f["a"])(K,I,R,!1,null,null,null),D=O.exports;y()(O,{VChip:m["a"],VDataTable:b["a"]});var w=i("767f"),H={name:"Statistics",components:{RoleStatistic:v,PlayerStatistic:S,BoxStatistic:D},props:{},data:function(){return{gamesCount:0,redWinsCount:0,blackWinsCount:0,gamesForRatingCount:0,ratingThreshold:.12,currentSort:"name",currentSortOrder:"asc",database:null,players:null,ratingPlayers:null,games:null,playerStatistics:{},playerStatisticsForDisplay:[],playerStatisticsForDisplayRating:[],headers:[{text:"Игрок",value:"name",sortable:!1},{text:"Очки",value:"relativePoints",sortable:!1},{text:"Игр",value:"games",sortable:!1},{text:"Побед",value:"wins",sortable:!1},{text:"Первый убитый",value:"firstKilled",sortable:!1},{text:"Лучший ход",value:"firstKilledGuessPoints",sortable:!1},{text:"Игр шерифом",value:"sherif",sortable:!1},{text:"Побед шерифом",value:"sherifWins",sortable:!1},{text:"Игр мирным",value:"citizen",sortable:!1},{text:"Игр доном",value:"don",sortable:!1},{text:"Побед доном",value:"donWins",sortable:!1},{text:"Игр мафом",value:"maf",sortable:!1},{text:"Побед мафом",value:"mafWins",sortable:!1},{text:"Баллы",value:"absolutePoints",sortable:!1}]}},mounted:function(){var e=Object(o["a"])(regeneratorRuntime.mark(function e(){var t,i,a,n,s,r,l;return regeneratorRuntime.wrap(function(e){while(1)switch(e.prev=e.next){case 0:0,t=(new Date).toISOString().substr(0,7).split("-"),i=t[0],a=t[1];case 4:return n=("0"+a).slice(-2),s="https://mafia-patron.github.io/statistic/{month}-games.json".replace("{month}",i+"-"+n),e.next=8,fetch(s);case 8:if(r=e.sent,!r.ok){e.next=18;break}return e.next=12,r.json();case 12:return l=e.sent,this.database=l,this.players=l.players,this.games=l.games,this.calculateStatistic(),e.abrupt("break",22);case 18:a--,0==a&&(a=12,i--,2018==i&&alert("Игры не найдены"));case 20:e.next=4;break;case 22:e.next=28;break;case 24:this.database=w,this.players=w.players,this.games=w.games,this.calculateStatistic();case 28:case"end":return e.stop()}},e,this)}));function t(){return e.apply(this,arguments)}return t}(),methods:{customSort:function(e){var t=this;return e.sort(function(e,i){var a=t.currentSort;return"desc"===t.currentSortOrder?e[a]>i[a]?-1:e[a]<i[a]?1:0:e[a]>i[a]?1:e[a]<i[a]?-1:0})},getPlayerName:function(e){return this.players.find(function(t){return t.id===e}).name},calculateStatistic:function(){var e=this;this.games.forEach(function(t){var i=[];t.players.forEach(function(t){i.push(e.getPlayerStatisticById(t))});for(var a=0;a<10;a++){var n=i[a];n.games++,n.box[a]++,e.playerWinGame(t,a)&&(n.wins++,n.boxWins[a]++),e.playerIsSherif(t,a)&&n.sherif++,e.playerIsSherifAndWin(t,a)&&n.sherifWins++,e.playerIsCitizen(t,a)&&n.citizen++,e.playerIsCitizenAndWin(t,a)&&n.citizenWins++,e.playerIsDon(t,a)&&n.don++,e.playerIsDonAndWin(t,a)&&n.donWins++,e.playerIsMaf(t,a)&&n.maf++,e.playerIsMafAndWin(t,a)&&n.mafWins++,e.firstKilled(t,a)&&(n.firstKilled++,n.firstKilledGuessPoints+=t.firstKilledGuessPoints);for(var s=0;s<10;s++)if(a!==s){var r=e.getStatisticWithOtherPlayerById(n,t.players[s]);r.gamesTogether++,e.playerIsRed(t,a)&&e.playerIsRed(t,s)&&(r.bothRed++,t.cityWin&&r.bothRedWins++),e.playerIsBlack(t,a)&&e.playerIsBlack(t,s)&&(r.bothBlack++,t.cityWin||r.bothBlackWins++),e.playerIsRed(t,a)&&e.playerIsBlack(t,s)&&(r.playerRed++,t.cityWin&&r.playerRedWins++),e.playerIsBlack(t,a)&&e.playerIsRed(t,s)&&(r.playerBlack++,t.cityWin||r.playerBlackWins++)}}}),this.gamesForRatingCount=Math.ceil(this.games.length*this.ratingThreshold),this.ratingPlayers=[],this.players.forEach(function(t){var i=e.getPlayerStatisticById(t.id);i.isRating=i.games>=e.gamesForRatingCount,e.calculatePoints(i),i.sherifWinPercent=e.calculatePercent(i.sherifWins,i.sherif),i.citizenWinPercent=e.calculatePercent(i.citizenWins,i.citizen),i.donWinPercent=e.calculatePercent(i.donWins,i.don),i.mafWinPercent=e.calculatePercent(i.mafWins,i.maf),e.playerStatisticsForDisplay.push(i),i.isRating&&(e.ratingPlayers.push(t),e.playerStatisticsForDisplayRating.push(i))}),this.players.forEach(function(t){var i=e.getPlayerStatisticById(t.id);i.withOtherPlayers=e.calculateStatisticWithOtherPlayers(i)}),this.ratingPlayers.sort(this.sortByNameFunction),this.gamesCount=this.games.length,this.redWinsCount=this.games.filter(function(e){return e.cityWin}).length,this.blackWinsCount=this.games.filter(function(e){return!e.cityWin}).length},calculateStatisticWithOtherPlayers:function(e){var t=[],i=this;return this.players.forEach(function(a){if(a.id!=e.id){var n=e.withOtherPlayers[a.id];if(n){var s=i.getPlayerStatisticById(a.id);s.isRating&&(n.bothRedWinPercent=i.calculatePercent(n.bothRedWins,n.bothRed),n.bothBlackWinPercent=i.calculatePercent(n.bothBlackWins,n.bothBlack),n.playerRedWinPercent=i.calculatePercent(n.playerRedWins,n.playerRed),n.playerBlackWinPercent=i.calculatePercent(n.playerBlackWins,n.playerBlack),t.push(n))}}}),t},getPlayerStatisticById:function(e){var t=this.playerStatistics[e];return t||(t={id:e,name:this.getPlayerName(e),games:0,wins:0,sherif:0,sherifWins:0,sherifWinPercent:0,citizen:0,citizenWins:0,citizenWinPercent:0,don:0,donWins:0,donWinPercent:0,maf:0,mafWins:0,mafWinPercent:0,firstKilled:0,firstKilledGuessPoints:0,absolutePoints:0,relativePoints:0,box:Array(10).fill(0),boxWins:Array(10).fill(0),isRating:!1,withOtherPlayers:{}},this.playerStatistics[e]=t),t},getStatisticWithOtherPlayerById:function(e,t){var i=e.withOtherPlayers[t];return i||(i={id:t,name:this.getPlayerName(t),gamesTogether:0,bothRed:0,bothRedWins:0,bothRedWinPercent:0,bothBlack:0,bothBlackWins:0,bothBlackWinPercent:0,playerRed:0,playerRedWins:0,playerRedWinPercent:0,playerBlack:0,playerBlackWins:0,playerBlackWinPercent:0},e.withOtherPlayers[t]=i),i},playerWinGame:function(e,t){return e.don==t||e.maf1==t||e.maf2==t?!e.cityWin:e.cityWin},playerIsSherif:function(e,t){return e.sherif==t},playerIsSherifAndWin:function(e,t){return e.cityWin&&this.playerIsSherif(e,t)},playerIsCitizen:function(e,t){return!(e.don==t||e.maf1==t||e.maf2==t||e.sherif==t)},playerIsCitizenAndWin:function(e,t){return e.cityWin&&this.playerIsCitizen(e,t)},playerIsDon:function(e,t){return e.don==t},playerIsDonAndWin:function(e,t){return!e.cityWin&&this.playerIsDon(e,t)},playerIsMaf:function(e,t){return e.maf1==t||e.maf2==t},playerIsMafAndWin:function(e,t){return!e.cityWin&&this.playerIsMaf(e,t)},firstKilled:function(e,t){return e.firstKilled==t},calculatePoints:function(e){e.absolutePoints=e.wins+e.firstKilledGuessPoints,e.relativePoints=Math.round(100*e.absolutePoints/e.games)},playerIsBlack:function(e,t){return e.don==t||e.maf1==t||e.maf2==t},playerIsRed:function(e,t){return!this.playerIsBlack(e,t)},calculatePercent:function(e,t){return 0==t?0:Math.round(1e3*e/t)/10},sortByNameFunction:function(e,t){return e.name>t.name?1:e.name<t.name?-1:0}}},z=H,F=(i("d823"),Object(f["a"])(z,r,l,!1,null,null,null)),G=F.exports;y()(F,{VDataTable:b["a"]});var j={name:"app",components:{Statistics:G}},A=j,T=(i("034f"),Object(f["a"])(A,n,s,!1,null,null,null)),M=T.exports,E=i("43f9"),V=i.n(E),N=(i("51de"),i("e094"),i("f309"));a["default"].use(N["a"]);var $=new N["a"]({icons:{iconfont:"mdi"}});a["default"].use(V.a),a["default"].config.productionTip=!1,new a["default"]({vuetify:$,render:function(e){return e(M)}}).$mount("#app")},"767f":function(e){e.exports={formatVersion:1,settings:{gamesMonth:"2019-08",maxPlayerId:21,maxGameId:4},games:[{id:1,date:"2019-08-01",players:[1,2,3,4,5,6,7,8,9,10],don:7,maf1:0,maf2:5,sherif:8,firstKilled:2,firstKilledGuessPoints:0,cityWin:!1},{id:2,date:"2019-08-02",players:[6,7,11,5,12,13,14,15,16,17],don:0,maf1:6,maf2:7,sherif:2,firstKilled:8,firstKilledGuessPoints:0,cityWin:!0},{id:3,date:"2019-08-03",players:[7,8,5,19,18,12,2,9,4,1],don:9,maf1:8,maf2:3,sherif:7,firstKilled:0,firstKilledGuessPoints:.25,cityWin:!1},{id:4,date:"2019-08-04",players:[19,7,1,12,18,9,20,13,4,5],don:3,maf1:0,maf2:4,sherif:1,firstKilled:2,firstKilledGuessPoints:0,cityWin:!1},{id:5,date:"2019-08-04",players:[19,7,1,12,18,9,20,13,4,5],don:3,maf1:0,maf2:4,sherif:1,firstKilled:2,firstKilledGuessPoints:0,cityWin:!1},{id:6,date:"2019-08-04",players:[19,7,1,12,18,9,20,13,4,5],don:3,maf1:0,maf2:4,sherif:1,firstKilled:2,firstKilledGuessPoints:0,cityWin:!1},{id:7,date:"2019-08-04",players:[19,7,1,12,18,9,20,13,4,5],don:3,maf1:0,maf2:4,sherif:1,firstKilled:2,firstKilledGuessPoints:0,cityWin:!1},{id:8,date:"2019-08-04",players:[19,7,1,12,18,9,20,13,4,5],don:3,maf1:0,maf2:4,sherif:1,firstKilled:2,firstKilledGuessPoints:0,cityWin:!1},{id:9,date:"2019-08-04",players:[19,7,1,12,18,9,20,13,4,5],don:3,maf1:0,maf2:4,sherif:1,firstKilled:2,firstKilledGuessPoints:0,cityWin:!1},{id:10,date:"2019-08-04",players:[19,7,1,12,18,9,20,13,4,5],don:3,maf1:0,maf2:4,sherif:1,firstKilled:2,firstKilledGuessPoints:0,cityWin:!1},{id:11,date:"2019-08-04",players:[19,7,1,12,18,9,20,13,4,5],don:3,maf1:0,maf2:4,sherif:1,firstKilled:2,firstKilledGuessPoints:0,cityWin:!1}],players:[{id:1,name:"Бернинг",nameHistory:[{nameChangeId:1,name:"Бернинг",date:1565800124544}]},{id:2,name:"Эми",nameHistory:[{nameChangeId:1,name:"Эми",date:1565800132685}]},{id:3,name:"Алиса (блондинка)",nameHistory:[{nameChangeId:1,name:"Алиса (блондинка)",date:1565800167452}]},{id:4,name:"Тургенев",nameHistory:[{nameChangeId:1,name:"Тургенев",date:1565800220573}]},{id:5,name:"SOVEST",nameHistory:[{nameChangeId:1,name:"SOVEST",date:1565800234216}]},{id:6,name:"Масяня",nameHistory:[{nameChangeId:1,name:"Масяня",date:1565800246415}]},{id:7,name:"Лёлик",nameHistory:[{nameChangeId:1,name:"Лёлик",date:1565800263835}]},{id:8,name:"Клон",nameHistory:[{nameChangeId:1,name:"Клон",date:1565800277351}]},{id:9,name:"Созерцающий",nameHistory:[{nameChangeId:1,name:"Созерцающий",date:1565800287637}]},{id:10,name:"Дутче",nameHistory:[{nameChangeId:1,name:"Дутче",date:1565800296750}]},{id:11,name:"Антоновка",nameHistory:[{nameChangeId:1,name:"Антоновка",date:1565800788493}]},{id:12,name:"Bottcelli",nameHistory:[{nameChangeId:1,name:"Bottcelli",date:1565800816894}]},{id:13,name:"Медведь",nameHistory:[{nameChangeId:1,name:"Медведь",date:1565800850521}]},{id:14,name:"Сантос",nameHistory:[{nameChangeId:1,name:"Сантос",date:1565800869034}]},{id:15,name:"Вильгельм",nameHistory:[{nameChangeId:1,name:"Вильгельм",date:1565800888773}]},{id:16,name:"Мастер",nameHistory:[{nameChangeId:1,name:"Мастер",date:1565800898960}]},{id:17,name:"Кот",nameHistory:[{nameChangeId:1,name:"Кот",date:1565800906540}]},{id:18,name:"Тетчер",nameHistory:[{nameChangeId:1,name:"Пила",date:1565801287035},{nameChangeId:2,name:"Тетчер",date:1565801295607}]},{id:19,name:"Нео",nameHistory:[{nameChangeId:1,name:"Пила",date:1565801572931},{nameChangeId:2,name:"Нео",date:1565801701045}]},{id:20,name:"Пила",nameHistory:[{nameChangeId:1,name:"Пила",date:1565801817647}]},{id:21,name:"Легион",nameHistory:[{nameChangeId:1,name:"Легион",date:1565801817647}]}]}},"7de0":function(e,t,i){},d823:function(e,t,i){"use strict";var a=i("f949"),n=i.n(a);n.a},f949:function(e,t,i){}});
-//# sourceMappingURL=app.87223b4c.js.map
+'use strict';
+(function(modules) {
+    /**
+     * @param {!Object} element
+     * @return {?}
+     */
+    function push(element) {
+        var moduleId;
+        var script_id;
+        var crossfilterable_layers = element[0];
+        var appliedUpdate = element[1];
+        var options = element[2];
+        /** @type {number} */
+        var layer_i = 0;
+        /** @type {!Array} */
+        var _sizeAnimateTimeStamps = [];
+        for (; layer_i < crossfilterable_layers.length; layer_i++) {
+            script_id = crossfilterable_layers[layer_i];
+            if (script[script_id]) {
+                _sizeAnimateTimeStamps.push(script[script_id][0]);
+            }
+            /** @type {number} */
+            script[script_id] = 0;
+        }
+        for (moduleId in appliedUpdate) {
+            if (Object.prototype.hasOwnProperty.call(appliedUpdate, moduleId)) {
+                modules[moduleId] = appliedUpdate[moduleId];
+            }
+        }
+        if (addRemoveClassesPostDigest) {
+            addRemoveClassesPostDigest(element);
+        }
+        for (; _sizeAnimateTimeStamps.length;) {
+            _sizeAnimateTimeStamps.shift()();
+        }
+        return tokens.push.apply(tokens, options || []), resolve();
+    }
+    /**
+     * @return {?}
+     */
+    function resolve() {
+        var x;
+        /** @type {number} */
+        var i = 0;
+        for (; i < tokens.length; i++) {
+            var m = tokens[i];
+            /** @type {boolean} */
+            var a = true;
+            /** @type {number} */
+            var t = 1;
+            for (; t < m.length; t++) {
+                var type = m[t];
+                if (0 !== script[type]) {
+                    /** @type {boolean} */
+                    a = false;
+                }
+            }
+            if (a) {
+                tokens.splice(i--, 1);
+                x = r(r.s = m[0]);
+            }
+        }
+        return x;
+    }
+    /**
+     * @param {string} i
+     * @return {?}
+     */
+    function r(i) {
+        if (n[i]) {
+            return n[i].exports;
+        }
+        var module = n[i] = {
+            i : i,
+            l : false,
+            exports : {}
+        };
+        return modules[i].call(module.exports, module, module.exports, r), module.l = true, module.exports;
+    }
+    var n = {};
+    var script = {
+        app : 0
+    };
+    /** @type {!Array} */
+    var tokens = [];
+    r.m = modules;
+    r.c = n;
+    /**
+     * @param {!Function} d
+     * @param {string} name
+     * @param {!Function} n
+     * @return {undefined}
+     */
+    r.d = function(d, name, n) {
+        if (!r.o(d, name)) {
+            Object.defineProperty(d, name, {
+                enumerable : true,
+                get : n
+            });
+        }
+    };
+    /**
+     * @param {!Object} x
+     * @return {undefined}
+     */
+    r.r = function(x) {
+        if ("undefined" !== typeof Symbol && Symbol.toStringTag) {
+            Object.defineProperty(x, Symbol.toStringTag, {
+                value : "Module"
+            });
+        }
+        Object.defineProperty(x, "__esModule", {
+            value : true
+        });
+    };
+    /**
+     * @param {string} e
+     * @param {number} a
+     * @return {?}
+     */
+    r.t = function(e, a) {
+        if (1 & a && (e = r(e)), 8 & a) {
+            return e;
+        }
+        if (4 & a && "object" === typeof e && e && e.__esModule) {
+            return e;
+        }
+        /** @type {!Object} */
+        var d = Object.create(null);
+        if (r.r(d), Object.defineProperty(d, "default", {
+            enumerable : true,
+            value : e
+        }), 2 & a && "string" != typeof e) {
+            var a;
+            for (a in e) {
+                r.d(d, a, function(childProp) {
+                    return e[childProp];
+                }.bind(null, a));
+            }
+        }
+        return d;
+    };
+    /**
+     * @param {!Object} module
+     * @return {?}
+     */
+    r.n = function(module) {
+        /** @type {function(): ?} */
+        var n = module && module.__esModule ? function() {
+            return module["default"];
+        } : function() {
+            return module;
+        };
+        return r.d(n, "a", n), n;
+    };
+    /**
+     * @param {!Function} e
+     * @param {string} x
+     * @return {?}
+     */
+    r.o = function(e, x) {
+        return Object.prototype.hasOwnProperty.call(e, x);
+    };
+    /** @type {string} */
+    r.p = "/";
+    var p = window["webpackJsonp"] = window["webpackJsonp"] || [];
+    var choiceParagraphElement = p.push.bind(p);
+    /** @type {function(!Object): ?} */
+    p.push = push;
+    p = p.slice();
+    /** @type {number} */
+    var x = 0;
+    for (; x < p.length; x++) {
+        push(p[x]);
+    }
+    var addRemoveClassesPostDigest = choiceParagraphElement;
+    tokens.push([0, "chunk-vendors"]);
+    resolve();
+})({
+    0 : function(module, object, instantiate) {
+        module.exports = instantiate("56d7");
+    },
+    "034f" : function(srcVersion, runtime, __webpack_require__) {
+        var __WEBPACK_IMPORTED_MODULE_1_jsmidgen__ = __webpack_require__("1356");
+        var clonedI = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jsmidgen__);
+        clonedI.a;
+    },
+    1356 : function(branchData, beforeZero, afterZero) {
+    },
+    2403 : function(srcVersion, runtime, __webpack_require__) {
+        var __WEBPACK_IMPORTED_MODULE_1_jsmidgen__ = __webpack_require__("7de0");
+        var clonedI = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jsmidgen__);
+        clonedI.a;
+    },
+    "56d7" : function(vdwB, d, $) {
+        $.r(d);
+        $("cadf");
+        $("551c");
+        $("f751");
+        $("097d");
+        var settings = $("2b0e");
+        /**
+         * @return {?}
+         */
+        var Element = function() {
+            var _vm = this;
+            var _h = _vm.$createElement;
+            var createElement = _vm._self._c || _h;
+            return createElement("div", {
+                attrs : {
+                    id : "app"
+                }
+            }, [createElement("Statistics")], 1);
+        };
+        /** @type {!Array} */
+        var _maskLayer = [];
+        /**
+         * @return {?}
+         */
+        var render = function() {
+            var self = this;
+            var _h = self.$createElement;
+            var h = self._self._c || _h;
+            return self.database ? h("md-tabs", [h("md-tab", {
+                attrs : {
+                    id : "tab-base",
+                    "md-label" : "\u0420\u0435\u0439\u0442\u0438\u043d\u0433"
+                }
+            }, [h("div", [h("v-data-table", {
+                attrs : {
+                    headers : self.headers,
+                    items : self.playerStatisticsForDisplay,
+                    "fixedHeader" : "",
+                    "height" : "700",
+                    "fixed-header" : "",
+                    "disable-pagination" : "",
+                    "hide-default-footer" : "",
+                    "multi-sort" : "",
+                    "mobile-breakpoint" : "0",
+                    "sort-by" : ["isRating", "relativePoints", "absolutePoints", "games", "name"],
+                    "sort-desc" : [true, true, true, true, false]
+                },
+                scopedSlots : self._u([{
+                    key : "item",
+                    fn : function(sender) {
+                        var item = sender.item;
+                        return [h("tr", {
+                            class : {
+                                notRating : !item.isRating
+                            }
+                        }, [h("td", {
+                            class : {
+                                topLevelPlayers : sender.index < 10
+                            }
+                        }, [self._v(self._s(item.isRating ? sender.index + 1 : ""))]), h("td", [self._v(self._s(item.name))]), h("td", {
+                            style : item.isRating ? {
+                                "background-color" : "rgb(255, 255, " + (255 - Math.round(item.relativePoints)%255) + ")"
+                            } : {}
+                        }, [self._v(self._s(item.relativePoints || 0))]), h("td", { style : {"border-left" : "1px solid #dddddd"}}, [self._v(self._s(item.games))]), h("td", [self._v(self._s(item.wins))]), h("td", { style : {"border-left" : "1px solid #dddddd"}}, [self._v(self._s(item.firstKilled))]), h("td", [self._v(self._s(item.firstKilledGuessPoints))]), h("td", { style : {"border-left" : "1px solid #dddddd"}}, [self._v(self._s(item.sherif))]), h("td", [self._v(self._s(item.sherifWins))]), h("td", { style : {"border-left" : "1px solid #dddddd"}}, [self._v(self._s(item.citizen))]), h("td", [self._v(self._s(item.citizenWins))]), h("td", { style : {"border-left" : "1px solid #dddddd"}}, [self._v(self._s(item.don))]), h("td", [self._v(self._s(item.donWins))]),
+                            h("td", { style : {"border-left" : "1px solid #dddddd"}}, [self._v(self._s(item.maf))]), h("td", [self._v(self._s(item.mafWins))]), h("td", { style : {"border-left" : "1px solid #dddddd"}}, [self._v(self._s(item.ci))]), h("td", { style : {"border-left" : "1px solid #dddddd"}}, [self._v(self._s(item.absolutePoints))])])];
+                    }
+                }], null, false, 3914092594)
+            })], 1), h("div", {
+                staticClass : "games-statistic games-statistic-all"
+            }, [self._v("\u0412\u0441\u0435\u0433\u043e \u0438\u0433\u0440: " + self._s(self.gamesCount))]), h("div", {
+                staticClass : "games-statistic games-statistic-red-wins"
+            }, [self._v("\u041f\u043e\u0431\u0435\u0434 \u043c\u0438\u0440\u043d\u044b\u0445: " + self._s(self.redWinsCount + " (" + Math.round(self.redWinsCount / self.gamesCount * 100) + "%)"))]), h("div", {
+                staticClass : "games-statistic games-statistic-black-wins"
+            }, [self._v("\u041f\u043e\u0431\u0435\u0434 \u043c\u0430\u0444\u0438\u0438: " + self._s(self.blackWinsCount + " (" + Math.round(self.blackWinsCount / self.gamesCount * 100) + "%)"))]), h("div", {
+                staticClass : "games-statistic games-statistic-rating"
+            }, [self._v("\u0418\u0433\u0440 \u0434\u043b\u044f \u043f\u043e\u043f\u0430\u0434\u0430\u043d\u0438\u044f \u0432 \u0440\u0435\u0439\u0442\u0438\u043d\u0433: " + self._s(self.gamesForRatingCount) + " (12%)")])]), h("md-tab", {
+                attrs : {
+                    id : "tab-roles",
+                    "md-label" : "\u041f\u043e \u0440\u043e\u043b\u044f\u043c"
+                }
+            }, [h("RoleStatistic", {
+                attrs : {
+                    playerStatisticsForDisplay : self.playerStatisticsForDisplayRating,
+                    players : self.ratingPlayers
+                }
+            })], 1), h("md-tab", {
+                attrs : {
+                    id : "tab-players",
+                    "md-label" : "\u041f\u043e \u0438\u0433\u0440\u043e\u043a\u0430\u043c"
+                }
+            }, [h("PlayerStatistic", {
+                attrs : {
+                    playerStatisticsForDisplay : self.playerStatisticsForDisplayRating,
+                    players : self.ratingPlayers
+                }
+            })], 1), h("md-tab", {
+                attrs : {
+                    id : "tab-box",
+                    "md-label" : "\u041f\u043e \u043d\u043e\u043c\u0435\u0440\u0430\u043c"
+                }
+            }, [h("BoxStatistic", {
+                attrs : {
+                    playerStatisticsForDisplay : self.playerStatisticsForDisplayRating,
+                    players : self.ratingPlayers
+                }
+            })], 1)], 1) : self._e();
+        };
+        /** @type {!Array} */
+        var numKeysDeleted = [];
+        var attrs = ($("6c7b"), $("ac6a"), $("7514"), $("7f7f"), $("55dd"), $("a481"), $("28a5"), $("96cf"), $("3b8d"));
+        /**
+         * @return {?}
+         */
+        var show = function() {
+            var self = this;
+            var _h = self.$createElement;
+            var _extends = self._self._c || _h;
+            return _extends("v-data-table", {
+                attrs : {
+                    headers : self.headers,
+                    items : self.items,
+                    options : self.options,
+                    "server-items-length" : 1,
+                    "disable-pagination" : "",
+                    "hide-default-footer" : "",
+                    "must-sort" : ""
+                },
+                on : {
+                    "update:options" : function(tmp) {
+                        /** @type {!Object} */
+                        self.options = tmp;
+                    }
+                },
+                scopedSlots : self._u([{
+                    key : "item.sherif",
+                    fn : function(sender) {
+                        var item = sender.item;
+                        return [_extends("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(item.sherifWinPercent)
+                            }
+                        }, [self._v(self._s(item.sherif) + "/" + self._s(item.sherifWins) + "\u00a0\u00a0\u00a0" + self._s(item.sherifWinPercent) + "%")])];
+                    }
+                }, {
+                    key : "item.citizen",
+                    fn : function(sender) {
+                        var item = sender.item;
+                        return [_extends("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(item.citizenWinPercent)
+                            }
+                        }, [self._v(self._s(item.citizen) + "/" + self._s(item.citizenWins) + "\u00a0\u00a0\u00a0" + self._s(item.citizenWinPercent) + "%")])];
+                    }
+                }, {
+                    key : "item.don",
+                    fn : function(sender) {
+                        var item = sender.item;
+                        return [_extends("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(item.donWinPercent)
+                            }
+                        }, [self._v(self._s(item.don) + "/" + self._s(item.donWins) + "\u00a0\u00a0\u00a0" + self._s(item.donWinPercent) + "%")])];
+                    }
+                }, {
+                    key : "item.maf",
+                    fn : function(sender) {
+                        var item = sender.item;
+                        return [ _extends("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(item.mafWinPercent)
+                            }
+                        }, [self._v(self._s(item.maf) + "/" + self._s(item.mafWins) + "\u00a0\u00a0\u00a0" + self._s(item.mafWinPercent) + "%")])];
+                    }
+                }])
+            });
+        };
+        /** @type {!Array} */
+        var whiteTable2 = [];
+        var python_django = ($("6762"), $("2fdb"), {
+            name : "RoleStatistic",
+            props : {
+                playerStatisticsForDisplay : Array,
+                players : Array
+            },
+            data : function() {
+                return {
+                    items : [],
+                    options : {},
+                    headers : [{
+                        text : "\u0418\u0433\u0440\u043e\u043a",
+                        value : "name"
+                    }, {
+                        text : "\u0428\u0435\u0440\u0438\u0444",
+                        value : "sherif"
+                    }, {
+                        text : "\u041c\u0438\u0440\u043d\u044b\u0439",
+                        value : "citizen"
+                    }, {
+                        text : "\u0414\u043e\u043d",
+                        value : "don"
+                    }, {
+                        text : "\u041c\u0430\u0444",
+                        value : "maf"
+                    }]
+                };
+            },
+            watch : {
+                options : {
+                    handler : function() {
+                        var self = this;
+                        this.getData().then(function(data) {
+                            self.items = data.items;
+                        });
+                    },
+                    deep : true
+                }
+            },
+            methods : {
+                displayChip : function(properties, id) {
+                    /** @type {string} */
+                    var str = id + "WinPercent";
+                    var size = this.getHighligting(properties[str], properties[id]);
+                    return "none" != size;
+                },
+                getColorPerc : function(perc) {
+                    var r, g, b = 0;
+                    if(perc < 50) {
+                        r = 255;
+                        g = Math.round(5.1 * perc);
+                    }
+                    else {
+                        g = 255;
+                        r = Math.round(510 - 5.10 * perc);
+                    }
+                    var h = r * 0x10000 + g * 0x100 + b * 0x1;
+                    return '#' + ('000000' + h.toString(16)).slice(-6);
+                },
+                getColor : function(s, id) {
+                    /** @type {string} */
+                    var str = id + "WinPercent";
+                    return this.getHighligting(s[str], s[id]);
+                },
+                getHighligting : function(i, t) {
+                    return 0 == t ? "none" : 100 == i ? "rgb(0, 255, 0)" : i > 60 ? "rgba(0, 255, 0, 0.5)" : 0 == i ? "rgb(255, 0, 0)" : "none";
+                },
+                getData : function() {
+                    var self = this;
+                    return new Promise(function(resolve) {
+                        var params = self.options;
+                        var field = params.sortBy;
+                        var match = params.sortDesc;
+                        var result = self.playerStatisticsForDisplay.slice(0);
+                        var diff = result.length;
+                        if (1 === field.length && 1 === match.length || 0 == field.length) {
+                            /** @type {string} */
+                            var key = "name";
+                            /** @type {boolean} */
+                            var reason = false;
+                            if (1 == field.length) {
+                                key = field[0];
+                                reason = match[0];
+                            }
+                            result = result.sort(function(expr, next) {
+                                if (["sherif", "citizen", "don", "maf"].includes(key)) {
+                                    return self.percentSort(expr, next, key, reason);
+                                }
+                                var c = expr[key];
+                                var f = next[key];
+                                return reason ? c < f ? 1 : c > f ? -1 : 0 : c < f ? -1 : c > f ? 1 : 0;
+                            });
+                        }
+                        resolve({
+                            items : result,
+                            total : diff
+                        });
+                    });
+                },
+                percentSort : function(lhs, rhs, property, text) {
+                    /** @type {string} */
+                    var RAW_ID = property + "WinPercent";
+                    return lhs[RAW_ID] > rhs[RAW_ID] ? text ? -1 : 1 : lhs[RAW_ID] < rhs[RAW_ID] ? text ? 1 : -1 : lhs[property] > rhs[property] ? text ? -1 : 1 : lhs[property] < rhs[property] ? text ? 1 : -1 : 0;
+                }
+            }
+        });
+        var name = python_django;
+        var attributes = $("2877");
+        var script = $("6544");
+        var require = $.n(script);
+        var m = $("cc20");
+        var j = $("8fea");
+        var result = Object(attributes["a"])(name, show, whiteTable2, false, null, null, null);
+        var exported = result.exports;
+        require()(result, {
+            VChip : m["a"],
+            VDataTable : j["a"]
+        });
+        /**
+         * @return {?}
+         */
+        var update = function() {
+            var self = this;
+            var _h = self.$createElement;
+            var _extends = self._self._c || _h;
+            return self.selectedPlayerId ? _extends("div", {
+                staticClass : "player-statistic"
+            }, [_extends("div", {
+                staticClass : "select-player-container"
+            }, [_extends("div", {
+                staticClass : "player-lable"
+            }, [self._v("\u0418\u0433\u0440\u043e\u043a:")]), _extends("div", {
+                staticClass : "player-selector"
+            }, [_extends("model-list-select", {
+                attrs : {
+                    list : self.players,
+                    "option-value" : "id",
+                    "option-text" : "name",
+                    placeholder : "\u0432\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0438\u0433\u0440\u043e\u043a\u0430"
+                },
+                model : {
+                    value : self.selectedPlayerId,
+                    callback : function(t) {
+                        /** @type {string} */
+                        self.selectedPlayerId = t;
+                    },
+                    expression : "selectedPlayerId"
+                }
+            })], 1)]), _extends("v-data-table", {
+                attrs : {
+                    headers : self.headers,
+                    items : self.items,
+                    options : self.options,
+                    "server-items-length" : 1,
+                    "disable-pagination" : "",
+                    "hide-default-footer" : "",
+                    "must-sort" : ""
+                },
+                on : {
+                    "update:options" : function(tmp) {
+                        /** @type {!Object} */
+                        self.options = tmp;
+                    }
+                },
+                scopedSlots : self._u([{
+                    key : "item.bothRed",
+                    fn : function(sender) {
+                        var item = sender.item;
+                        return [_extends("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(item.bothRedWinPercent)
+                            }
+                        }, [self._v(self._s(item.bothRed) + "/" + self._s(item.bothRedWins) + "\u00a0\u00a0\u00a0" + self._s(item.bothRedWinPercent) + "%")])];
+                    }
+                }, {
+                    key : "item.bothBlack",
+                    fn : function(sender) {
+                        var item = sender.item;
+                        return [_extends("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(item.bothBlackWinPercent)
+                            }
+                        }, [self._v(self._s(item.bothBlack) + "/" + self._s(item.bothBlackWins) + "\u00a0\u00a0\u00a0" + self._s(item.bothBlackWinPercent) + "%")])];
+                    }
+                }, {
+                    key : "item.playerRed",
+                    fn : function(sender) {
+                        var item = sender.item;
+                        return [_extends("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(item.playerRedWinPercent)
+                            }
+                        }, [self._v(self._s(item.playerRed) + "/" + self._s(item.playerRedWins) + "\u00a0\u00a0\u00a0" + self._s(item.playerRedWinPercent) + "%")])];
+                    }
+                }, {
+                    key : "item.playerBlack",
+                    fn : function(sender) {
+                        var item = sender.item;
+                        return [_extends("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(item.playerBlackWinPercent)
+                            }
+                        }, [self._v(self._s(item.playerBlack) + "/" + self._s(item.playerBlackWins) + "\u00a0\u00a0\u00a0" + self._s(item.playerBlackWinPercent) + "%")])];
+                    }
+                }], null, false, 3098048137)
+            })], 1) : self._e();
+        };
+        /** @type {!Array} */
+        var GET_AUTH_URL_TIMEOUT = [];
+        var strangth = $("0393");
+        var params = {
+            name : "PlayerStatistic",
+            props : {
+                playerStatisticsForDisplay : Array,
+                players : Array
+            },
+            components : {
+                ModelListSelect : strangth["ModelListSelect"]
+            },
+            data : function() {
+                return {
+                    currentSort : "name",
+                    currentSortOrder : "asc",
+                    selectedPlayerId : null,
+                    selectedPlayerName : "",
+                    statisticWithOtherPlayers : null,
+                    items : [],
+                    options : {},
+                    headers : [{
+                        text : "\u0418\u0433\u0440\u043e\u043a",
+                        value : "name"
+                    }, {
+                        text : "\u0412\u043c\u0435\u0441\u0442\u0435 \u043a\u0440\u0430\u0441\u043d\u044b\u0435",
+                        value : "bothRed"
+                    }, {
+                        text : "\u0412\u043c\u0435\u0441\u0442\u0435 \u0447\u0451\u0440\u043d\u044b\u0435",
+                        value : "bothBlack"
+                    }, {
+                        text : "\u0420\u0430\u0437\u043d\u043e\u0446\u0432\u0435\u0442 (\u0438\u0433\u0440\u043e\u043a \u043a\u0440\u0430\u0441\u043d\u044b\u0439)",
+                        value : "playerRed"
+                    }, {
+                        text : "\u0420\u0430\u0437\u043d\u043e\u0446\u0432\u0435\u0442 (\u0438\u0433\u0440\u043e\u043a \u0447\u0451\u0440\u043d\u044b\u0439)",
+                        value : "playerBlack"
+                    }]
+                };
+            },
+            mounted : function() {
+                this.selectedPlayerId = this.players[0].id;
+            },
+            watch : {
+                selectedPlayerId : function(e) {
+                    this.selectedPlayerName = this.getPlayerName(e);
+                    this.statisticWithOtherPlayers = this.playerStatisticsForDisplay.find(function(elem) {
+                        return elem.id === e;
+                    }).withOtherPlayers;
+                    this.updateTable();
+                },
+                options : {
+                    handler : function() {
+                        this.updateTable();
+                    },
+                    deep : true
+                }
+            },
+            methods : {
+                displayChip : function(properties, id) {
+                    /** @type {string} */
+                    var str = id + "WinPercent";
+                    var size = this.getHighligting(properties[str], properties[id]);
+                    return "none" != size;
+                },
+                getColorPerc : function(perc) {
+                    var r, g, b = 0;
+                    if(perc < 50) {
+                        r = 255;
+                        g = Math.round(5.1 * perc);
+                    }
+                    else {
+                        g = 255;
+                        r = Math.round(510 - 5.10 * perc);
+                    }
+                    var h = r * 0x10000 + g * 0x100 + b * 0x1;
+                    return '#' + ('000000' + h.toString(16)).slice(-6);
+                },
+                getColor : function(s, id) {
+                    /** @type {string} */
+                    var str = id + "WinPercent";
+                    return this.getHighligting(s[str], s[id]);
+                },
+                getHighligting : function(i, t) {
+                    return 0 == t ? "none" : 100 == i ? "rgb(0, 255, 0)" : i > 60 ? "rgba(0, 255, 0, 0.5)" : 0 == i ? "rgb(255, 0, 0)" : "none";
+                },
+                updateTable : function() {
+                    var self = this;
+                    this.getData().then(function(data) {
+                        self.items = data.items;
+                    });
+                },
+                getData : function() {
+                    var self = this;
+                    return new Promise(function(resolve) {
+                        var params = self.options;
+                        var field = params.sortBy;
+                        var match = params.sortDesc;
+                        var result = self.statisticWithOtherPlayers.slice(0);
+                        var diff = result.length;
+                        if (void 0 == field || 1 === field.length && 1 === match.length || 0 === field.length) {
+                            /** @type {string} */
+                            var key = "name";
+                            /** @type {boolean} */
+                            var reason = false;
+                            if (void 0 != field && 1 == field.length) {
+                                key = field[0];
+                                reason = match[0];
+                            }
+                            result = result.sort(function(expr, next) {
+                                if (["bothRed", "bothBlack", "playerRed", "playerBlack"].includes(key)) {
+                                    return self.percentSort(expr, next, key, reason);
+                                }
+                                var c = expr[key];
+                                var f = next[key];
+                                return reason ? c < f ? 1 : c > f ? -1 : 0 : c < f ? -1 : c > f ? 1 : 0;
+                            });
+                        }
+                        resolve({
+                            items : result,
+                            total : diff
+                        });
+                    });
+                },
+                percentSort : function(lhs, rhs, property, text) {
+                    /** @type {string} */
+                    var RAW_ID = property + "WinPercent";
+                    return lhs[RAW_ID] > rhs[RAW_ID] ? text ? -1 : 1 : lhs[RAW_ID] < rhs[RAW_ID] ? text ? 1 : -1 : lhs[property] > rhs[property] ? text ? -1 : 1 : lhs[property] < rhs[property] ? text ? 1 : -1 : 0;
+                },
+                getPlayerName : function(e) {
+                    return this.players.find(function(elem) {
+                        return elem.id === e;
+                    }).name;
+                }
+            }
+        };
+        var newParams = params;
+        var module = ($("2403"), Object(attributes["a"])(newParams, update, GET_AUTH_URL_TIMEOUT, false, null, null, null));
+        var exports_ = module.exports;
+        require()(module, {
+            VChip : m["a"],
+            VDataTable : j["a"]
+        });
+        /**
+         * @return {?}
+         */
+        var then = function() {
+            var self = this;
+            var _h = self.$createElement;
+            var wrap = self._self._c || _h;
+            return wrap("v-data-table", {
+                attrs : {
+                    headers : self.headers,
+                    items : self.playerStatisticsForDisplay,
+                    "disable-pagination" : "",
+                    "hide-default-footer" : "",
+                    "must-sort" : "",
+                    "sort-by" : "name"
+                },
+                scopedSlots : self._u([{
+                    key : "item.box0",
+                    fn : function(widget) {
+                        var node = widget.item;
+                        return [wrap("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(node.box[0] !== 0 ? Math.round((node.boxWins[0]*100)/node.box[0]) : 0)
+                            }
+                        }, [self._v(self._s(node.box[0]) + "/" + self._s(node.boxWins[0]))])];
+                    }
+                }, {
+                    key : "item.box1",
+                    fn : function(widget) {
+                        var node = widget.item;
+                        return [wrap("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(node.box[1] !== 0 ? Math.round((node.boxWins[1]*100)/node.box[1]) : 0)
+                            }
+                        }, [self._v(self._s(node.box[1]) + "/" + self._s(node.boxWins[1]))])];
+                    }
+                }, {
+                    key : "item.box2",
+                    fn : function(widget) {
+                        var node = widget.item;
+                        return [wrap("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(node.box[2] !== 0 ? Math.round((node.boxWins[2]*100)/node.box[2]) : 0)
+                            }
+                        }, [self._v(self._s(node.box[2]) + "/" + self._s(node.boxWins[2]))])];
+                    }
+                }, {
+                    key : "item.box3",
+                    fn : function(widget) {
+                        var node = widget.item;
+                        return [wrap("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(node.box[3] !== 0 ? Math.round((node.boxWins[3]*100)/node.box[3]) : 0)
+                            }
+                        }, [self._v(self._s(node.box[3]) + "/" + self._s(node.boxWins[3]))])];
+                    }
+                }, {
+                    key : "item.box4",
+                    fn : function(widget) {
+                        var node = widget.item;
+                        return [wrap("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(node.box[4] !== 0 ? Math.round((node.boxWins[4]*100)/node.box[4]) : 0)
+                            }
+                        }, [self._v(self._s(node.box[4]) + "/" + self._s(node.boxWins[4]))])];
+                    }
+                }, {
+                    key : "item.box5",
+                    fn : function(widget) {
+                        var node = widget.item;
+                        return [wrap("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(node.box[5] !== 0 ? Math.round((node.boxWins[5]*100)/node.box[5]) : 0)
+                            }
+                        }, [self._v(self._s(node.box[5]) + "/" + self._s(node.boxWins[5]))])];
+                    }
+                }, {
+                    key : "item.box6",
+                    fn : function(widget) {
+                        var node = widget.item;
+                        return [wrap("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(node.box[6] !== 0 ? Math.round((node.boxWins[6]*100)/node.box[6]) : 0)
+                            }
+                        }, [self._v(self._s(node.box[6]) + "/" + self._s(node.boxWins[6]))])];
+                    }
+                }, {
+                    key : "item.box7",
+                    fn : function(widget) {
+                        var node = widget.item;
+                        return [wrap("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(node.box[7] !== 0 ? Math.round((node.boxWins[7]*100)/node.box[7]) : 0)
+                            }
+                        }, [self._v(self._s(node.box[7]) + "/" + self._s(node.boxWins[7]))])];
+                    }
+                }, {
+                    key : "item.box8",
+                    fn : function(widget) {
+                        var node = widget.item;
+                        return [wrap("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(node.box[8] !== 0 ? Math.round((node.boxWins[8]*100)/node.box[8]) : 0)
+                            }
+                        }, [self._v(self._s(node.box[8]) + "/" + self._s(node.boxWins[8]))])];
+                    }
+                }, {
+                    key : "item.box9",
+                    fn : function(widget) {
+                        var node = widget.item;
+                        return [wrap("v-chip", {
+                            attrs : {
+                                color : self.getColorPerc(node.box[9] !== 0 ? Math.round((node.boxWins[9]*100)/node.box[9]) : 0)
+                            }
+                        }, [self._v(self._s(node.box[9]) + "/" + self._s(node.boxWins[9]))])];
+                    }
+                }])
+            });
+        };
+        /** @type {!Array} */
+        var startsWith = [];
+        var Field = {
+            name : "BoxStatistic",
+            props : {
+                playerStatisticsForDisplay : Array,
+                players : Array
+            },
+            data : function() {
+                return {
+                    items : [],
+                    options : {},
+                    headers : [{
+                        text : "\u0418\u0433\u0440\u043e\u043a",
+                        value : "name"
+                    }, {
+                        text : "1 \u043d\u043e\u043c\u0435\u0440",
+                        value : "box0",
+                        sortable : false
+                    }, {
+                        text : "2 \u043d\u043e\u043c\u0435\u0440",
+                        value : "box1",
+                        sortable : false
+                    }, {
+                        text : "3 \u043d\u043e\u043c\u0435\u0440",
+                        value : "box2",
+                        sortable : false
+                    }, {
+                        text : "4 \u043d\u043e\u043c\u0435\u0440",
+                        value : "box3",
+                        sortable : false
+                    }, {
+                        text : "5 \u043d\u043e\u043c\u0435\u0440",
+                        value : "box4",
+                        sortable : false
+                    }, {
+                        text : "6 \u043d\u043e\u043c\u0435\u0440",
+                        value : "box5",
+                        sortable : false
+                    }, {
+                        text : "7 \u043d\u043e\u043c\u0435\u0440",
+                        value : "box6",
+                        sortable : false
+                    }, {
+                        text : "8 \u043d\u043e\u043c\u0435\u0440",
+                        value : "box7",
+                        sortable : false
+                    }, {
+                        text : "9 \u043d\u043e\u043c\u0435\u0440",
+                        value : "box8",
+                        sortable : false
+                    }, {
+                        text : "10 \u043d\u043e\u043c\u0435\u0440",
+                        value : "box9",
+                        sortable : false
+                    }]
+                };
+            },
+            methods : {
+                displayChip : function(n, id) {
+                    var val = this.getHighligting(n, id);
+                    return "none" != val;
+                },
+                getColorPerc : function(perc) {
+                    var r, g, b = 0;
+                    if(perc < 50) {
+                        r = 255;
+                        g = Math.round(5.1 * perc);
+                    }
+                    else {
+                        g = 255;
+                        r = Math.round(510 - 5.10 * perc);
+                    }
+                    var h = r * 0x10000 + g * 0x100 + b * 0x1;
+                    return '#' + ('000000' + h.toString(16)).slice(-6);
+                },
+                getColor : function(n, id) {
+                    return this.getHighligting(n, id);
+                },
+                getHighligting : function(g, name) {
+                    return 0 == g.box[name] ? "none" : g.boxWins[name] == g.box[name] ? "rgb(0, 255, 0)" : 100 * g.boxWins[name] / g.box[name] > 60 ? "rgba(0, 255, 0, 0.5)" : 0 == g.boxWins[name] ? "rgb(255, 0, 0)" : "none";
+                }
+            }
+        };
+        var componentName = Field;
+        var that = Object(attributes["a"])(componentName, then, startsWith, false, null, null, null);
+        var tooltip = that.exports;
+        require()(that, {
+            VChip : m["a"],
+            VDataTable : j["a"]
+        });
+        var action = $("767f");
+        var view1 = {
+            name : "Statistics",
+            components : {
+                RoleStatistic : exported,
+                PlayerStatistic : exports_,
+                BoxStatistic : tooltip
+            },
+            props : {},
+            data : function() {
+                return {
+                    gamesCount : 0,
+                    redWinsCount : 0,
+                    blackWinsCount : 0,
+                    gamesForRatingCount : 0,
+                    ratingThreshold : .12,
+                    currentSort : "name",
+                    currentSortOrder : "asc",
+                    database : null,
+                    players : null,
+                    ratingPlayers : null,
+                    games : null,
+                    playerStatistics : {},
+                    playerStatisticsForDisplay : [],
+                    playerStatisticsForDisplayRating : [],
+                    headers : [{
+                        text : "\u041c\u0435\u0441\u0442\u043e",
+                        value : "name",
+                        sortable : false
+                    }, {
+                        text : "\u0418\u0433\u0440\u043e\u043a",
+                        value : "name",
+                        sortable : false
+                    }, {
+                        text : "\u041e\u0447\u043a\u0438",
+                        value : "relativePoints",
+                        sortable : false
+                    }, {
+                        text : "\u0418\u0433\u0440",
+                        value : "games",
+                        sortable : false
+                    }, {
+                        text : "\u041f\u043e\u0431\u0435\u0434",
+                        value : "wins",
+                        sortable : false
+                    }, {
+                        text : "\u041f\u0435\u0440\u0432\u044b\u0439 \u0443\u0431\u0438\u0442\u044b\u0439",
+                        value : "firstKilled",
+                        sortable : false
+                    }, {
+                        text : "\u041b\u0443\u0447\u0448\u0438\u0439 \u0445\u043e\u0434",
+                        value : "firstKilledGuessPoints",
+                        sortable : false
+                    }, {
+                        text : "\u0418\u0433\u0440 \u0448\u0435\u0440\u0438\u0444\u043e\u043c",
+                        value : "sherif",
+                        sortable : false
+                    }, {
+                        text : "\u041f\u043e\u0431\u0435\u0434 \u0448\u0435\u0440\u0438\u0444\u043e\u043c",
+                        value : "sherifWins",
+                        sortable : false
+                    }, {
+                        text : "\u0418\u0433\u0440 \u043c\u0438\u0440\u043d\u044b\u043c",
+                        value : "citizen",
+                        sortable : false
+                    }, {
+                        text : "\u041f\u043e\u0431\u0435\u0434 \u043c\u0438\u0440\u043d\u044b\u043c",
+                        value : "citizenWins",
+                        sortable : false
+                    }, {
+                        text : "\u0418\u0433\u0440 \u0434\u043e\u043d\u043e\u043c",
+                        value : "don",
+                        sortable : false
+                    }, {
+                        text : "\u041f\u043e\u0431\u0435\u0434 \u0434\u043e\u043d\u043e\u043c",
+                        value : "donWins",
+                        sortable : false
+                    }, {
+                        text : "\u0418\u0433\u0440 \u043c\u0430\u0444\u043e\u043c",
+                        value : "maf",
+                        sortable : false
+                    }, {
+                        text : "\u041f\u043e\u0431\u0435\u0434 \u043c\u0430\u0444\u043e\u043c",
+                        value : "mafWins",
+                        sortable : false
+                    }, {
+                        text : "CI",
+                        value : "ci",
+                        sortable : false
+                    }, {
+                        text : "\u0411\u0430\u043b\u043b\u044b",
+                        value : "absolutePoints",
+                        sortable : false
+                    }]
+                };
+            },
+            mounted : function() {
+                /**
+                 * @return {?}
+                 */
+                function ItemLabelView() {
+                    return oldSetupComputes.apply(this, arguments);
+                }
+                var oldSetupComputes = Object(attrs["a"])(regeneratorRuntime.mark(function start() {
+                    var result;
+                    var value;
+                    var e;
+                    var property;
+                    var ajaxPostUrl;
+                    var r;
+                    var data;
+                    return regeneratorRuntime.wrap(function(_context10) {
+                        for (; 1;) {
+                            switch(_context10.prev = _context10.next) {
+                                case 0:
+                                    0;
+                                    /** @type {!Array<string>} */
+                                    result = (new Date).toISOString().substr(0, 7).split("-");
+                                    /** @type {string} */
+                                    value = result[0];
+                                    /** @type {string} */
+                                    e = result[1];
+                                case 4:
+                                    return property = ("0" + e).slice(-2), ajaxPostUrl = "https://mafia-patron.github.io/statistic/{month}-games.json".replace("{month}", value + "-" + property), _context10.next = 8, fetch(ajaxPostUrl);
+                                case 8:
+                                    if (r = _context10.sent, !r.ok) {
+                                        /** @type {number} */
+                                        _context10.next = 18;
+                                        break;
+                                    }
+                                    return _context10.next = 12, r.json();
+                                case 12:
+                                    return data = _context10.sent, this.database = data, this.players = data.players, this.games = data.games, this.calculateStatistic(), _context10.abrupt("break", 22);
+                                case 18:
+                                    e--;
+                                    if (0 == e) {
+                                        /** @type {number} */
+                                        e = 12;
+                                        value--;
+                                        if (2018 == value) {
+                                            alert("\u0418\u0433\u0440\u044b \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u044b");
+                                        }
+                                    }
+                                case 20:
+                                    /** @type {number} */
+                                    _context10.next = 4;
+                                    break;
+                                case 22:
+                                    /** @type {number} */
+                                    _context10.next = 28;
+                                    break;
+                                case 24:
+                                    this.database = action;
+                                    this.players = action.players;
+                                    this.games = action.games;
+                                    this.calculateStatistic();
+                                case 28:
+                                case "end":
+                                    return _context10.stop();
+                            }
+                        }
+                    }, start, this);
+                }));
+                return ItemLabelView;
+            }(),
+            methods : {
+                customSort : function(b) {
+                    var vm = this;
+                    return b.sort(function(newBlend, mixer) {
+                        var a = vm.currentSort;
+                        return "desc" === vm.currentSortOrder ? newBlend[a] > mixer[a] ? -1 : newBlend[a] < mixer[a] ? 1 : 0 : newBlend[a] > mixer[a] ? 1 : newBlend[a] < mixer[a] ? -1 : 0;
+                    });
+                },
+                getPlayerName : function(e) {
+                    return this.players.find(function(elem) {
+                        return elem.id === e;
+                    }).name;
+                },
+                calculateStatistic : function() {
+                    var common = this;
+                    this.games.forEach(function(options) {
+                        /** @type {!Array} */
+                        var list = [];
+                        options.players.forEach(function(value) {
+                            list.push(common.getPlayerStatisticById(value));
+                        });
+                        /** @type {number} */
+                        var name = 0;
+                        for (; name < 10; name++) {
+                            var item = list[name];
+                            item.games++;
+                            item.box[name]++;
+                            if (common.playerWinGame(options, name)) {
+                                item.wins++;
+                                item.boxWins[name]++;
+                            }
+                            if (common.playerIsSherif(options, name)) {
+                                item.sherif++;
+                            }
+                            if (common.playerIsSherifAndWin(options, name)) {
+                                item.sherifWins++;
+                            }
+                            if (common.playerIsCitizen(options, name)) {
+                                item.citizen++;
+                            }
+                            if (common.playerIsCitizenAndWin(options, name)) {
+                                item.citizenWins++;
+                            }
+                            if (common.playerIsDon(options, name)) {
+                                item.don++;
+                            }
+                            if (common.playerIsDonAndWin(options, name)) {
+                                item.donWins++;
+                            }
+                            if (common.playerIsMaf(options, name)) {
+                                item.maf++;
+                            }
+                            if (common.playerIsMafAndWin(options, name)) {
+                                item.mafWins++;
+                            }
+                            if (common.firstKilled(options, name)) {
+								if (!common.playerWinGame(options, name)) {
+									item.firstKilledAndLose++;
+								}
+                                item.firstKilled++;
+                                item.firstKilledGuessPoints += options.firstKilledGuessPoints;
+                            }
+                            /** @type {number} */
+                            var key = 0;
+                            for (; key < 10; key++) {
+                                if (name !== key) {
+                                    var preventQuestModal = common.getStatisticWithOtherPlayerById(item, options.players[key]);
+                                    preventQuestModal.gamesTogether++;
+                                    if (common.playerIsRed(options, name) && common.playerIsRed(options, key)) {
+                                        preventQuestModal.bothRed++;
+                                        if (options.cityWin) {
+                                            preventQuestModal.bothRedWins++;
+                                        }
+                                    }
+                                    if (common.playerIsBlack(options, name) && common.playerIsBlack(options, key)) {
+                                        preventQuestModal.bothBlack++;
+                                        if (!options.cityWin) {
+                                            preventQuestModal.bothBlackWins++;
+                                        }
+                                    }
+                                    if (common.playerIsRed(options, name) && common.playerIsBlack(options, key)) {
+                                        preventQuestModal.playerRed++;
+                                        if (options.cityWin) {
+                                            preventQuestModal.playerRedWins++;
+                                        }
+                                    }
+                                    if (common.playerIsBlack(options, name) && common.playerIsRed(options, key)) {
+                                        preventQuestModal.playerBlack++;
+                                        if (!options.cityWin) {
+                                            preventQuestModal.playerBlackWins++;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                    /** @type {number} */
+                    this.gamesForRatingCount = Math.ceil(this.games.length * this.ratingThreshold);
+                    /** @type {!Array} */
+                    this.ratingPlayers = [];
+                    this.players.forEach(function(post) {
+                        var item = common.getPlayerStatisticById(post.id);
+                        /** @type {boolean} */
+                        item.isRating = item.games >= common.gamesForRatingCount;
+                        common.calculateCi(item);
+                        common.calculatePoints(item);
+                        item.sherifWinPercent = common.calculatePercent(item.sherifWins, item.sherif);
+                        item.citizenWinPercent = common.calculatePercent(item.citizenWins, item.citizen);
+                        item.donWinPercent = common.calculatePercent(item.donWins, item.don);
+                        item.mafWinPercent = common.calculatePercent(item.mafWins, item.maf);
+                        common.playerStatisticsForDisplay.push(item);
+                        if (item.isRating) {
+                            common.ratingPlayers.push(post);
+                            common.playerStatisticsForDisplayRating.push(item);
+                        }
+                    });
+                    this.players.forEach(function(speaker) {
+                        var key = common.getPlayerStatisticById(speaker.id);
+                        key.withOtherPlayers = common.calculateStatisticWithOtherPlayers(key);
+                    });
+                    this.ratingPlayers.sort(this.sortByNameFunction);
+                    this.gamesCount = this.games.length;
+                    this.redWinsCount = this.games.filter(function(canCreateDiscussions) {
+                        return canCreateDiscussions.cityWin;
+                    }).length;
+                    this.blackWinsCount = this.games.filter(function(canCreateDiscussions) {
+                        return !canCreateDiscussions.cityWin;
+                    }).length;
+                },
+                calculateStatisticWithOtherPlayers : function(that) {
+                    /** @type {!Array} */
+                    var sharedBreakpointsVals = [];
+                    var common = this;
+                    return this.players.forEach(function(data) {
+                        if (data.id != that.id) {
+                            var controller = that.withOtherPlayers[data.id];
+                            if (controller) {
+                                var s = common.getPlayerStatisticById(data.id);
+                                if (s.isRating) {
+                                    controller.bothRedWinPercent = common.calculatePercent(controller.bothRedWins, controller.bothRed);
+                                    controller.bothBlackWinPercent = common.calculatePercent(controller.bothBlackWins, controller.bothBlack);
+                                    controller.playerRedWinPercent = common.calculatePercent(controller.playerRedWins, controller.playerRed);
+                                    controller.playerBlackWinPercent = common.calculatePercent(controller.playerBlackWins, controller.playerBlack);
+                                    sharedBreakpointsVals.push(controller);
+                                }
+                            }
+                        }
+                    }), sharedBreakpointsVals;
+                },
+                getPlayerStatisticById : function(id) {
+                    var ret = this.playerStatistics[id];
+                    return ret || (ret = {
+                        id : id,
+                        name : this.getPlayerName(id),
+                        games : 0,
+                        wins : 0,
+                        sherif : 0,
+                        sherifWins : 0,
+                        sherifWinPercent : 0,
+                        citizen : 0,
+                        citizenWins : 0,
+                        citizenWinPercent : 0,
+                        don : 0,
+                        donWins : 0,
+                        donWinPercent : 0,
+                        maf : 0,
+                        mafWins : 0,
+                        mafWinPercent : 0,
+                        firstKilled : 0,
+                        firstKilledAndLose : 0,
+                        firstKilledGuessPoints : 0,
+                        absolutePoints : 0,
+                        relativePoints : 0,
+                        ci : 0,
+                        box : Array(10).fill(0),
+                        boxWins : Array(10).fill(0),
+                        isRating : false,
+                        withOtherPlayers : {}
+                    }, this.playerStatistics[id] = ret), ret;
+                },
+                getStatisticWithOtherPlayerById : function(e, id) {
+                    var match = e.withOtherPlayers[id];
+                    return match || (match = {
+                        id : id,
+                        name : this.getPlayerName(id),
+                        gamesTogether : 0,
+                        bothRed : 0,
+                        bothRedWins : 0,
+                        bothRedWinPercent : 0,
+                        bothBlack : 0,
+                        bothBlackWins : 0,
+                        bothBlackWinPercent : 0,
+                        playerRed : 0,
+                        playerRedWins : 0,
+                        playerRedWinPercent : 0,
+                        playerBlack : 0,
+                        playerBlackWins : 0,
+                        playerBlackWinPercent : 0
+                    }, e.withOtherPlayers[id] = match), match;
+                },
+                playerWinGame : function(o, t) {
+                    return o.don == t || o.maf1 == t || o.maf2 == t ? !o.cityWin : o.cityWin;
+                },
+                playerIsSherif : function(obj, index) {
+                    return obj.sherif == index;
+                },
+                playerIsSherifAndWin : function(e, classname) {
+                    return e.cityWin && this.playerIsSherif(e, classname);
+                },
+                playerIsCitizen : function(fn, type) {
+                    return !(fn.don == type || fn.maf1 == type || fn.maf2 == type || fn.sherif == type);
+                },
+                playerIsCitizenAndWin : function(e, classname) {
+                    return e.cityWin && this.playerIsCitizen(e, classname);
+                },
+                playerIsDon : function(o, t) {
+                    return o.don == t;
+                },
+                playerIsDonAndWin : function(obsOrValue, cb) {
+                    return !obsOrValue.cityWin && this.playerIsDon(obsOrValue, cb);
+                },
+                playerIsMaf : function(option, value) {
+                    return option.maf1 == value || option.maf2 == value;
+                },
+                playerIsMafAndWin : function(input, nc) {
+                    return !input.cityWin && this.playerIsMaf(input, nc);
+                },
+                firstKilled : function(o, t) {
+                    return o.firstKilled == t;
+                },
+                calculatePoints : function(b) {
+                    b.absolutePoints = (b.wins + b.firstKilledGuessPoints + (b.games !== 0 ? ((b.games - b.wins) * (b.firstKilled / b.games)) : 0)).toFixed(2);
+                    /** @type {number} */
+                    b.relativePoints = b.games !== 0 ? (100 * b.absolutePoints / b.games).toFixed(2) : 0;
+                },
+                playerIsBlack : function(o, t) {
+                    return o.don == t || o.maf1 == t || o.maf2 == t;
+                },
+                playerIsRed : function(response, id) {
+                    return !this.playerIsBlack(response, id);
+                },
+                calculatePercent : function(lost_time, total_time) {
+                    return 0 == total_time ? 0 : Math.round(1E3 * lost_time / total_time) / 10;
+                },
+                sortByNameFunction : function(a, b) {
+                    return a.name > b.name ? 1 : a.name < b.name ? -1 : 0;
+                },
+                calculateCi : function(b) {
+                    b.ci = (b.games !== 0 ? (b.firstKilledAndLose * (b.firstKilled / b.games)) : 0).toFixed(2);
+                }
+            }
+        };
+        var activeView = view1;
+        var pkg = ($("d823"), Object(attributes["a"])(activeView, render, numKeysDeleted, false, null, null, null));
+        var main = pkg.exports;
+        require()(pkg, {
+            VDataTable : j["a"]
+        });
+        var insertPage = {
+            name : "app",
+            components : {
+                Statistics : main
+            }
+        };
+        var wsFunction = insertPage;
+        var __weex_module__ = ($("034f"), Object(attributes["a"])(wsFunction, Element, _maskLayer, false, null, null, null));
+        var foreignExports = __weex_module__.exports;
+        var value = $("43f9");
+        var s = $.n(value);
+        var __WEBPACK_IMPORTED_MODULE_0_vue_router__ = ($("51de"), $("e094"), $("f309"));
+        settings["default"].use(__WEBPACK_IMPORTED_MODULE_0_vue_router__["a"]);
+        var i = new __WEBPACK_IMPORTED_MODULE_0_vue_router__["a"]({
+            icons : {
+                iconfont : "mdi"
+            }
+        });
+        settings["default"].use(s.a);
+        /** @type {boolean} */
+        settings["default"].config.productionTip = false;
+        (new settings["default"]({
+            vuetify : i,
+            render : function(TextAdd) {
+                return TextAdd(foreignExports);
+            }
+        })).$mount("#app");
+    },
+    "767f" : function(scope) {
+        scope.exports = {
+            formatVersion : 1,
+            settings : {
+                gamesMonth : "2019-08",
+                maxPlayerId : 21,
+                maxGameId : 4
+            },
+            games : [{
+                id : 1,
+                date : "2019-08-01",
+                players : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                don : 7,
+                maf1 : 0,
+                maf2 : 5,
+                sherif : 8,
+                firstKilled : 2,
+                firstKilledGuessPoints : 0,
+                cityWin : false
+            }, {
+                id : 2,
+                date : "2019-08-02",
+                players : [6, 7, 11, 5, 12, 13, 14, 15, 16, 17],
+                don : 0,
+                maf1 : 6,
+                maf2 : 7,
+                sherif : 2,
+                firstKilled : 8,
+                firstKilledGuessPoints : 0,
+                cityWin : true
+            }, {
+                id : 3,
+                date : "2019-08-03",
+                players : [7, 8, 5, 19, 18, 12, 2, 9, 4, 1],
+                don : 9,
+                maf1 : 8,
+                maf2 : 3,
+                sherif : 7,
+                firstKilled : 0,
+                firstKilledGuessPoints : .25,
+                cityWin : false
+            }, {
+                id : 4,
+                date : "2019-08-04",
+                players : [19, 7, 1, 12, 18, 9, 20, 13, 4, 5],
+                don : 3,
+                maf1 : 0,
+                maf2 : 4,
+                sherif : 1,
+                firstKilled : 2,
+                firstKilledGuessPoints : 0,
+                cityWin : false
+            }, {
+                id : 5,
+                date : "2019-08-04",
+                players : [19, 7, 1, 12, 18, 9, 20, 13, 4, 5],
+                don : 3,
+                maf1 : 0,
+                maf2 : 4,
+                sherif : 1,
+                firstKilled : 2,
+                firstKilledGuessPoints : 0,
+                cityWin : false
+            }, {
+                id : 6,
+                date : "2019-08-04",
+                players : [19, 7, 1, 12, 18, 9, 20, 13, 4, 5],
+                don : 3,
+                maf1 : 0,
+                maf2 : 4,
+                sherif : 1,
+                firstKilled : 2,
+                firstKilledGuessPoints : 0,
+                cityWin : false
+            }, {
+                id : 7,
+                date : "2019-08-04",
+                players : [19, 7, 1, 12, 18, 9, 20, 13, 4, 5],
+                don : 3,
+                maf1 : 0,
+                maf2 : 4,
+                sherif : 1,
+                firstKilled : 2,
+                firstKilledGuessPoints : 0,
+                cityWin : false
+            }, {
+                id : 8,
+                date : "2019-08-04",
+                players : [19, 7, 1, 12, 18, 9, 20, 13, 4, 5],
+                don : 3,
+                maf1 : 0,
+                maf2 : 4,
+                sherif : 1,
+                firstKilled : 2,
+                firstKilledGuessPoints : 0,
+                cityWin : false
+            }, {
+                id : 9,
+                date : "2019-08-04",
+                players : [19, 7, 1, 12, 18, 9, 20, 13, 4, 5],
+                don : 3,
+                maf1 : 0,
+                maf2 : 4,
+                sherif : 1,
+                firstKilled : 2,
+                firstKilledGuessPoints : 0,
+                cityWin : false
+            }, {
+                id : 10,
+                date : "2019-08-04",
+                players : [19, 7, 1, 12, 18, 9, 20, 13, 4, 5],
+                don : 3,
+                maf1 : 0,
+                maf2 : 4,
+                sherif : 1,
+                firstKilled : 2,
+                firstKilledGuessPoints : 0,
+                cityWin : false
+            }, {
+                id : 11,
+                date : "2019-08-04",
+                players : [19, 7, 1, 12, 18, 9, 20, 13, 4, 5],
+                don : 3,
+                maf1 : 0,
+                maf2 : 4,
+                sherif : 1,
+                firstKilled : 2,
+                firstKilledGuessPoints : 0,
+                cityWin : false
+            }],
+            players : [{
+                id : 1,
+                name : "\u0411\u0435\u0440\u043d\u0438\u043d\u0433",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u0411\u0435\u0440\u043d\u0438\u043d\u0433",
+                    date : 1565800124544
+                }]
+            }, {
+                id : 2,
+                name : "\u042d\u043c\u0438",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u042d\u043c\u0438",
+                    date : 1565800132685
+                }]
+            }, {
+                id : 3,
+                name : "\u0410\u043b\u0438\u0441\u0430 (\u0431\u043b\u043e\u043d\u0434\u0438\u043d\u043a\u0430)",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u0410\u043b\u0438\u0441\u0430 (\u0431\u043b\u043e\u043d\u0434\u0438\u043d\u043a\u0430)",
+                    date : 1565800167452
+                }]
+            }, {
+                id : 4,
+                name : "\u0422\u0443\u0440\u0433\u0435\u043d\u0435\u0432",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u0422\u0443\u0440\u0433\u0435\u043d\u0435\u0432",
+                    date : 1565800220573
+                }]
+            }, {
+                id : 5,
+                name : "SOVEST",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "SOVEST",
+                    date : 1565800234216
+                }]
+            }, {
+                id : 6,
+                name : "\u041c\u0430\u0441\u044f\u043d\u044f",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u041c\u0430\u0441\u044f\u043d\u044f",
+                    date : 1565800246415
+                }]
+            }, {
+                id : 7,
+                name : "\u041b\u0451\u043b\u0438\u043a",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u041b\u0451\u043b\u0438\u043a",
+                    date : 1565800263835
+                }]
+            }, {
+                id : 8,
+                name : "\u041a\u043b\u043e\u043d",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u041a\u043b\u043e\u043d",
+                    date : 1565800277351
+                }]
+            }, {
+                id : 9,
+                name : "\u0421\u043e\u0437\u0435\u0440\u0446\u0430\u044e\u0449\u0438\u0439",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u0421\u043e\u0437\u0435\u0440\u0446\u0430\u044e\u0449\u0438\u0439",
+                    date : 1565800287637
+                }]
+            }, {
+                id : 10,
+                name : "\u0414\u0443\u0442\u0447\u0435",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u0414\u0443\u0442\u0447\u0435",
+                    date : 1565800296750
+                }]
+            }, {
+                id : 11,
+                name : "\u0410\u043d\u0442\u043e\u043d\u043e\u0432\u043a\u0430",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u0410\u043d\u0442\u043e\u043d\u043e\u0432\u043a\u0430",
+                    date : 1565800788493
+                }]
+            }, {
+                id : 12,
+                name : "Bottcelli",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "Bottcelli",
+                    date : 1565800816894
+                }]
+            }, {
+                id : 13,
+                name : "\u041c\u0435\u0434\u0432\u0435\u0434\u044c",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u041c\u0435\u0434\u0432\u0435\u0434\u044c",
+                    date : 1565800850521
+                }]
+            }, {
+                id : 14,
+                name : "\u0421\u0430\u043d\u0442\u043e\u0441",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u0421\u0430\u043d\u0442\u043e\u0441",
+                    date : 1565800869034
+                }]
+            }, {
+                id : 15,
+                name : "\u0412\u0438\u043b\u044c\u0433\u0435\u043b\u044c\u043c",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u0412\u0438\u043b\u044c\u0433\u0435\u043b\u044c\u043c",
+                    date : 1565800888773
+                }]
+            }, {
+                id : 16,
+                name : "\u041c\u0430\u0441\u0442\u0435\u0440",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u041c\u0430\u0441\u0442\u0435\u0440",
+                    date : 1565800898960
+                }]
+            }, {
+                id : 17,
+                name : "\u041a\u043e\u0442",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u041a\u043e\u0442",
+                    date : 1565800906540
+                }]
+            }, {
+                id : 18,
+                name : "\u0422\u0435\u0442\u0447\u0435\u0440",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u041f\u0438\u043b\u0430",
+                    date : 1565801287035
+                }, {
+                    nameChangeId : 2,
+                    name : "\u0422\u0435\u0442\u0447\u0435\u0440",
+                    date : 1565801295607
+                }]
+            }, {
+                id : 19,
+                name : "\u041d\u0435\u043e",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u041f\u0438\u043b\u0430",
+                    date : 1565801572931
+                }, {
+                    nameChangeId : 2,
+                    name : "\u041d\u0435\u043e",
+                    date : 1565801701045
+                }]
+            }, {
+                id : 20,
+                name : "\u041f\u0438\u043b\u0430",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u041f\u0438\u043b\u0430",
+                    date : 1565801817647
+                }]
+            }, {
+                id : 21,
+                name : "\u041b\u0435\u0433\u0438\u043e\u043d",
+                nameHistory : [{
+                    nameChangeId : 1,
+                    name : "\u041b\u0435\u0433\u0438\u043e\u043d",
+                    date : 1565801817647
+                }]
+            }]
+        };
+    },
+    "7de0" : function(branchData, beforeZero, afterZero) {
+    },
+    d823 : function(srcVersion, runtime, __webpack_require__) {
+        var __WEBPACK_IMPORTED_MODULE_1_jsmidgen__ = __webpack_require__("f949");
+        var clonedI = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jsmidgen__);
+        clonedI.a;
+    },
+    f949 : function(branchData, beforeZero, afterZero) {
+    }
+});
