@@ -1326,7 +1326,7 @@
                     return o.firstKilled == t;
                 },
                 calculatePoints : function(b) {
-                    b.absolutePoints = (b.wins + b.firstKilledGuessPoints + (b.games !== 0 ? ((b.games - b.wins) * (b.firstKilled / b.games)) : 0)).toFixed(2);
+                    b.absolutePoints = (b.wins + b.firstKilledGuessPoints + (b.games !== 0 ? (b.firstKilledAndLose * (b.firstKilled / b.games)) : 0)).toFixed(2);
                     /** @type {number} */
                     b.relativePoints = b.games !== 0 ? (100 * b.absolutePoints / b.games).toFixed(2) : 0;
                 },
