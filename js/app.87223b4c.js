@@ -945,7 +945,7 @@
                     redWinsCount : 0,
                     blackWinsCount : 0,
                     gamesForRatingCount : 0,
-                    ratingThreshold : .12,
+                    ratingThreshold : .35,
                     currentSort : "name",
                     currentSortOrder : "asc",
                     database : null,
