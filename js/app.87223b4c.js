@@ -1198,7 +1198,7 @@
                     this.players.forEach(function(post) {
                         var item = common.getPlayerStatisticById(post.id);
                         /** @type {boolean} */
-                        item.isRating = item.games >= common.;
+                        item.isRating = item.games >= common.gamesForRatingCount;
                         common.calculateCi(item);
                         common.calculatePoints(item);
                         item.sherifWinPercent = common.calculatePercent(item.sherifWins, item.sherif);
